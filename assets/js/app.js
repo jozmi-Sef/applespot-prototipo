@@ -9,20 +9,6 @@ const C = AS.config;
 const page = document.body.dataset.page || '';
 const params = new URLSearchParams(location.search);
 
-/* TEMAS DE PRUEBA (borrar al elegir uno): ?tema=a|b|c, se recuerda al navegar */
-(() => {
-  const q = (params.get('tema') || '').toLowerCase();
-  const keys = ['a', 'b', 'd', 'e', 'c'];
-  if (keys.includes(q)) localStorage.setItem('as_theme', q);
-  const t = localStorage.getItem('as_theme') || 'd';
-  document.documentElement.dataset.theme = t;
-  const names = { a: 'Negro', b: 'Grafito cálido', d: 'Azul noche', e: 'Espresso', c: 'Portada clara' };
-  const link = k => { const u = new URLSearchParams(location.search); u.set('tema', k); return '?' + u; };
-  const ui = document.createElement('div');
-  ui.className = 'theme-sw'; ui.setAttribute('aria-label', 'Tema de prueba');
-  ui.innerHTML = `<span>Tema: ${names[t]}</span>${keys.map(k => `<a href="${link(k)}" aria-current="${k === t}" title="${names[k]}">${k.toUpperCase()}</a>`).join('')}`;
-  document.body.appendChild(ui);
-})();
 const fmt = n => 'S/ ' + Number(n).toLocaleString('en-US');
 const wa = (txt = '') => `https://wa.me/${C.whatsapp}${txt ? '?text=' + encodeURIComponent(txt) : ''}`;
 const launchActive = () => new Date() < new Date(C.launchEnds);

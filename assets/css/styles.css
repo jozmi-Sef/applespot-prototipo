@@ -12,7 +12,7 @@
   --brand:linear-gradient(90deg,#FBCB10 0%,#F39A1E 62%,#D8601A 100%);
   --ink:#111111; --ink-2:#5E5E5E; --ink-3:#8A8A8A;
   --paper:#F6F5F2; --paper-2:#EDEBE6; --white:#FFFFFF;
-  /* Fondos oscuros: Azul noche (tema D, elegido para probar) */
+  /* Fondos oscuros: Azul noche */
   --d0:#0B1220; --d1:#09101B; --d2:#111A2B; --d3:#172236; --d4:#1E2A41; --d5:#28354E;
   --ok:#1E9E57; --err:#D9473A;
   --ease:cubic-bezier(0.22,1,0.36,1);
@@ -764,38 +764,6 @@ footer.site{background:var(--d1);color:#BDBDBD;padding:64px 0 32px;font-size:14p
   .line .r{grid-column:2;justify-items:start;display:flex;gap:16px;align-items:center}
   .specs{grid-template-columns:1fr}
 }
-
-/* =========================================================
-   TEMAS DE PRUEBA (solo para comparar; borrar al elegir uno)
-   Se activan con ?tema=b o ?tema=c · ?tema=a vuelve al original
-   ========================================================= */
-/* B · Grafito cálido: todos los fondos oscuros pasan de negro a grafito con tono café */
-/* A · Negro original */
-html[data-theme="a"]{--d0:#000000;--d1:#131209;--d2:#181818;--d3:#1F1F1F;--d4:#272727;--d5:#313131}
-html[data-theme="b"]{--d0:#1A1714;--d1:#15120F;--d2:#221E1A;--d3:#2A2520;--d4:#332D27;--d5:#3D362F}
-/* D · Azul noche: complementario del naranja, resalta mucho el acento */
-html[data-theme="d"]{--d0:#0B1220;--d1:#09101B;--d2:#111A2B;--d3:#172236;--d4:#1E2A41;--d5:#28354E}
-/* E · Espresso: café muy oscuro, cálido y premium */
-html[data-theme="e"]{--d0:#1C130D;--d1:#170F0A;--d2:#241A13;--d3:#2C2118;--d4:#36291F;--d5:#423327}
-
-/* C · Portada clara: solo el carrusel de inicio pasa a fondo claro */
-html[data-theme="c"] .promo{background:var(--paper);color:var(--ink)}
-html[data-theme="c"] .nav-bar{background:rgba(17,17,17,.9)}
-html[data-theme="c"] .slide h1,html[data-theme="c"] .slide h2.t{background:linear-gradient(90deg,#111111,#555555);-webkit-background-clip:text;background-clip:text}
-html[data-theme="c"] .slide .accent{background:linear-gradient(90deg,#F38B1A,#C4501A);-webkit-background-clip:text;background-clip:text}
-html[data-theme="c"] .slide .sub{color:var(--ink-2)}
-html[data-theme="c"] .promo .btn-ghost{color:#C4501A}
-html[data-theme="c"] .promo .glow{opacity:.45}
-html[data-theme="c"] .gift-card:not(.plus),html[data-theme="c"] .art-acc div,html[data-theme="c"] .promo .countdown div{background:var(--white);border:1px solid var(--paper-2);box-shadow:0 12px 32px -20px rgba(0,0,0,.25)}
-html[data-theme="c"] .gift-card i,html[data-theme="c"] .art-acc div:nth-child(even){color:var(--orange)}
-html[data-theme="c"] .art-acc div{color:var(--ink)}
-html[data-theme="c"] .gift-card small,html[data-theme="c"] .promo .countdown small{color:var(--ink-2)}
-
-/* Selector de temas */
-.theme-sw{position:fixed;left:16px;bottom:16px;z-index:60;display:flex;align-items:center;gap:4px;padding:4px;border-radius:9999px;background:rgba(24,24,24,.86);backdrop-filter:blur(12px);color:#fff;font-size:12px;line-height:16px;font-weight:600}
-.theme-sw span{padding:0 8px;color:#A9A9A9}
-.theme-sw a{width:32px;height:32px;border-radius:9999px;display:grid;place-items:center}
-.theme-sw a[aria-current="true"]{background:var(--yellow);color:#111}
 
 /* ---------- Mi cuenta: inicio de sesión con código (estilo cuentas de Shopify) ---------- */
 .auth{max-width:420px;margin:24px auto 0;padding:40px 32px;text-align:left}
