@@ -42,9 +42,6 @@ Hoy el iPhone que gira está dibujado en código. Para usar un video real:
 2. Conviértelo para que avance de forma suave con el scroll:
    `ffmpeg -i giro.mp4 -an -vcodec libx264 -g 1 -crf 22 -pix_fmt yuv420p assets/video/iphone-giro.mp4`
 3. En data.js escribe `scrollVideo: 'assets/video/iphone-giro.mp4'`.
-
-En **celular** no hay giro con scroll. Se muestra un video en bucle (`mobileVideo` en data.js; vertical 9:16 o 4:5, 6 a 10 s, sin audio, máx. ~3 MB). Si está vacío, se muestra el iPhone fijo.
-
 ## Pendiente del cliente
 - Fotos reales de producto (fondo blanco, mínimo 1200 × 1200 px).
 - Videos de clientes (formato vertical 9:16).

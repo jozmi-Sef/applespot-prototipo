@@ -321,22 +321,6 @@ AS.spin = root => {
   const ease = t => t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
   const clamp = v => Math.max(0, Math.min(1, v));
   let video = null, phone = null;
-  /* Celular: sin giro con scroll. Video en bucle (C.mobileVideo) o iPhone fijo */
-  if (matchMedia('(max-width: 860px)').matches) {
-    root.classList.add('spin-m');
-    const reduceM = matchMedia('(prefers-reduced-motion: reduce)').matches;
-    scene.innerHTML = C.mobileVideo
-      ? `<video class="spin-mvideo" src="${C.mobileVideo}" muted loop playsinline preload="metadata" ${reduceM ? 'controls' : ''}></video>`
-      : `<div class="spin-static">${phoneSVG('cosmic', 'back', '')}</div>`;
-    const mv = $('.spin-mvideo', scene);
-    if (mv && !reduceM) new IntersectionObserver(([e]) => e.isIntersecting ? mv.play().catch(() => {}) : mv.pause(), { threshold: .4 }).observe(mv);
-    $$('.sw', end).forEach(b => b.addEventListener('click', () => {
-      $$('.sw', end).forEach(x => x.setAttribute('aria-pressed', x === b));
-      $('.spin-end small', root).textContent = AS.finishes[b.dataset.f].name;
-      const st = $('.spin-static', scene); if (st) st.innerHTML = phoneSVG(b.dataset.f, 'back', '');
-    }));
-    return;
-  }
   if (C.scrollVideo) {
     scene.outerHTML = `<video class="spin-video" src="${C.scrollVideo}" muted playsinline preload="auto"></video>`;
     video = $('.spin-video', root);

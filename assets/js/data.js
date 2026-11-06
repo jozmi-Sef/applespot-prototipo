@@ -23,11 +23,7 @@ AS.config = {
   coupon: { code: 'PRIMERA10', pct: 10, appliesTo: 'accesorio' },
   // Video para el giro 3D con scroll. Déjalo vacío para usar el iPhone 3D dibujado.
   // Ejemplo: 'assets/video/iphone-18-pro-max-giro.mp4'
-  scrollVideo: '',
-  // Video para CELULAR (en bucle, sin giro con scroll). Vertical 9:16 o 4:5, 6 a 10 s, sin audio, máx. ~3 MB.
-  // Déjalo vacío para mostrar el iPhone fijo. Ejemplo: 'assets/video/iphone-18-pro-max-movil.mp4'
-  mobileVideo: '',
-  // Costos referenciales de envío cuando el pedido NO incluye iPhone
+  scrollVideo: '',  // Costos referenciales de envío cuando el pedido NO incluye iPhone
   shippingAccessories: { piura: 8, provincias: 15 }
 };
 
