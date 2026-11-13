@@ -1,0 +1,64 @@
+{%- capture wa -%}{%- render 'wa-url' -%}{%- endcapture -%}
+<footer class="site">
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        {%- if settings.logo_dark -%}
+          {{ settings.logo_dark | image_url: width: 300 | image_tag: alt: 'AppleSpot', loading: 'lazy' }}
+        {%- else -%}
+          <img src="{{ 'logo-dark.png' | asset_url }}" alt="{{ shop.name }}" width="144" height="72" loading="lazy">
+        {%- endif -%}
+        <p style="margin-top:16px;max-width:280px">{{ section.settings.about }}</p>
+        {%- if settings.page_reclamaciones != blank -%}
+          <a class="reclamo" href="{{ settings.page_reclamaciones.url }}"><i class="ph ph-book-open-text"></i>Libro de Reclamaciones</a>
+        {%- endif -%}
+      </div>
+      {%- for block in section.blocks -%}
+        <div {{ block.shopify_attributes }}>
+          <h4>{{ block.settings.title }}</h4>
+          <ul>
+            {%- for link in block.settings.menu.links -%}<li><a href="{{ link.url }}">{{ link.title }}</a></li>{%- endfor -%}
+          </ul>
+        </div>
+      {%- endfor -%}
+      <div>
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="{{ wa | strip }}" target="_blank" rel="noopener">WhatsApp {{ settings.whatsapp_label }}</a></li>
+          {%- if settings.instagram != blank -%}<li><a href="{{ settings.instagram }}" target="_blank" rel="noopener">Instagram</a></li>{%- endif -%}
+          {%- if settings.tiktok != blank -%}<li><a href="{{ settings.tiktok }}" target="_blank" rel="noopener">TikTok</a></li>{%- endif -%}
+          {%- if settings.facebook != blank -%}<li><a href="{{ settings.facebook }}" target="_blank" rel="noopener">Facebook</a></li>{%- endif -%}
+          <li>{{ settings.address }}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal-bar">
+      <span>© {{ 'now' | date: '%Y' }} {{ settings.brand_a }}{{ settings.brand_b }}{% if settings.ruc != blank %} · RUC {{ settings.ruc }}{% endif %}
+        {%- for link in section.settings.legal_menu.links %} · <a href="{{ link.url }}">{{ link.title }}</a>{% endfor -%}
+      </span>
+      <span class="legal-logos">{%- assign logos = settings.pay_logos | split: ',' -%}{%- for l in logos -%}<span>{{ l | strip }}</span>{%- endfor -%}</span>
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Pie de página",
+  "class": "footer-section",
+  "max_blocks": 3,
+  "settings": [
+    { "type": "textarea", "id": "about", "label": "Texto", "default": "Venta de iPhone y accesorios originales en Piura, con envío a todo el Perú." },
+    { "type": "link_list", "id": "legal_menu", "label": "Enlaces legales (barra inferior)", "info": "Términos, Privacidad, Libro de Reclamaciones." }
+  ],
+  "blocks": [
+    {
+      "type": "menu",
+      "name": "Columna de enlaces",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Título", "default": "Tienda" },
+        { "type": "link_list", "id": "menu", "label": "Menú" }
+      ]
+    }
+  ]
+}
+{% endschema %}
