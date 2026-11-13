@@ -1,0 +1,60 @@
+{%- assign s = section.settings -%}
+<section class="sec"{% if s.no_top %} style="padding-top:0"{% endif %} aria-labelledby="fc-{{ section.id }}">
+  <div class="wrap">
+    <div class="sec-head rv">
+      {%- if s.kicker != blank -%}<p class="kicker">{{ s.kicker }}</p>{%- endif -%}
+      <h2 id="fc-{{ section.id }}">{{ s.heading }}</h2>
+      {%- if s.text != blank -%}<p>{{ s.text }}</p>{%- endif -%}
+    </div>
+    {%- if section.blocks.size > 0 -%}
+      <div class="about-grid" style="margin-bottom:48px">
+        {%- for block in section.blocks -%}
+          <div class="ben rv" {{ block.shopify_attributes }}><div class="ico"><i class="ph ph-{{ block.settings.icon }}"></i></div><h3>{{ block.settings.title }}</h3><p>{{ block.settings.text }}</p></div>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+    <div class="products">
+      {%- if s.collection != blank and s.collection.products_count > 0 -%}
+        {%- for product in s.collection.products limit: s.limit -%}{%- render 'product-card', product: product -%}{%- endfor -%}
+      {%- elsif s.collection != blank -%}
+        <div class="empty" style="grid-column:1/-1"><div class="ico"><i class="ph ph-package"></i></div><h3>Muy pronto</h3><p>Estamos cargando los equipos de «{{ s.collection.title }}». Mientras tanto, escríbenos por WhatsApp.</p></div>
+      {%- else -%}
+        <div class="empty" style="grid-column:1/-1"><div class="ico"><i class="ph ph-package"></i></div><h3>Elige una colección</h3><p>En el editor del tema, selecciona la colección que se mostrará aquí.</p></div>
+      {%- endif -%}
+    </div>
+    {%- if s.note != blank -%}<p class="note rv"><i class="ph ph-{{ s.note_icon }}"></i>{{ s.note }}</p>{%- endif -%}
+    {%- if s.button_label != blank -%}
+      <div style="text-align:center;margin-top:32px" class="rv"><a href="{{ s.button_link | default: s.collection.url }}" class="btn btn-line">{{ s.button_label }} <i class="ph ph-arrow-right"></i></a></div>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Colección destacada",
+  "settings": [
+    { "type": "text", "id": "kicker", "label": "Antetítulo", "default": "Más vendidos" },
+    { "type": "text", "id": "heading", "label": "Título", "default": "iPhone nuevos sellados" },
+    { "type": "textarea", "id": "text", "label": "Texto", "default": "Elige tu color. Todos incluyen envío gratis y garantía de 1 año." },
+    { "type": "collection", "id": "collection", "label": "Colección" },
+    { "type": "range", "id": "limit", "label": "Productos", "min": 2, "max": 12, "step": 1, "default": 4 },
+    { "type": "text", "id": "note", "label": "Nota inferior", "default": "Equipos en stock: entrega de 3 a 5 días. Equipos a pedido: entrega de 6 a 7 días." },
+    { "type": "text", "id": "note_icon", "label": "Ícono de la nota (Phosphor)", "default": "info" },
+    { "type": "text", "id": "button_label", "label": "Botón", "default": "Ver todos los iPhone" },
+    { "type": "url", "id": "button_link", "label": "Enlace del botón (vacío = la colección)" },
+    { "type": "checkbox", "id": "no_top", "label": "Sin espacio superior", "default": true }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Tarjeta informativa",
+      "settings": [
+        { "type": "text", "id": "icon", "label": "Ícono (nombre Phosphor)", "default": "battery-high", "info": "Ver phosphoricons.com. Ej.: battery-high, sparkle, hand, shield-check." },
+        { "type": "text", "id": "title", "label": "Título", "default": "Salud de batería real" },
+        { "type": "textarea", "id": "text", "label": "Texto" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Colección destacada" }]
+}
+{% endschema %}
