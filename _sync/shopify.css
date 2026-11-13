@@ -1,0 +1,65 @@
+/* =========================================================
+   AppleSpot · Ajustes propios del tema Shopify
+   (base.css es el diseño aprobado del prototipo; aquí solo lo nuevo)
+   ========================================================= */
+
+/* Editor de temas: mostrar todo sin esperar la animación */
+.shopify-design-mode .rv { opacity: 1; transform: none; }
+
+/* Fotos reales en tarjetas y escenarios */
+.card-media .card-img { width: 100%; height: 100%; object-fit: contain; padding: 8%; transition: transform .8s var(--ease); }
+.card-media .card-img.cover { object-fit: cover; padding: 0; }
+.card:hover .card-media .card-img { transform: scale(1.04); }
+.stage .stage-img { width: 100%; height: 100%; object-fit: contain; padding: 6%; }
+.thumb img { width: 100%; height: 100%; object-fit: contain; border-radius: 16px; padding: 6px; }
+.cmp-art img { height: 100%; width: auto; object-fit: contain; }
+.cat-photo { width: 100%; max-height: 280px; object-fit: contain; }
+.art-photo { max-height: 520px; width: auto; object-fit: contain; position: relative; z-index: 1; }
+.g-img, .reel-poster, .map-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.reel-video, .reel video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.reel .play, .reel-top, .reel-cap { z-index: 1; }
+
+/* Selectores de variantes (radio nativo) */
+.sw-lbl, .opt-lbl { position: relative; cursor: pointer; display: block; }
+.sw-lbl .sw { display: block; }
+.sw-lbl input:checked + .sw { box-shadow: 0 0 0 2px var(--white), 0 0 0 4px var(--ink); }
+.sw-lbl input:focus-visible + .sw, .opt-lbl input:focus-visible + .opt { outline: 2px solid var(--orange); outline-offset: 2px; }
+.opt-lbl .opt { display: block; height: 100%; }
+.opt-lbl input:checked + .opt { box-shadow: inset 0 0 0 2px var(--ink); }
+.sw-lbl.na .sw, .opt-lbl.na .opt { opacity: .4; }
+.opt-lbl.na .opt b { text-decoration: line-through; }
+
+/* Cantidad en el carrito */
+.qty a { width: 32px; height: 32px; display: grid; place-items: center; border-radius: 9999px; transition: background-color .3s var(--ease); }
+.qty a:hover { background: var(--paper); }
+.qty-in { width: 40px; border: 0; background: none; text-align: center; font-weight: 600; font-variant-numeric: tabular-nums; -moz-appearance: textfield; }
+.qty-in::-webkit-outer-spin-button, .qty-in::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+.line .thumb-l img { width: 100%; height: 100%; object-fit: contain; padding: 8px; }
+
+/* Filtros nativos de Shopify */
+.f-opt { cursor: pointer; }
+.f-opt.on { background: var(--ink); color: #fff; }
+.f-opt.na { opacity: .4; cursor: default; }
+.two-price { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.two-price .inp { padding: 8px 12px; font-size: 14px; }
+.filters form { display: grid; gap: 24px; }
+
+/* Paginación */
+.pager { display: flex; justify-content: center; align-items: center; gap: 16px; margin-top: 40px; font-size: 14px; color: var(--ink-2); }
+
+/* Texto enriquecido (descripciones, páginas, respuestas) */
+.rte > * + * { margin-top: 12px; }
+.rte a { text-decoration: underline; text-underline-offset: 2px; }
+.rte ul, .rte ol { padding-left: 20px; display: grid; gap: 6px; }
+.rte img { border-radius: 16px; }
+.faq .faq-a { padding: 0 0 24px; color: var(--ink-2); max-width: 640px; }
+.faq .faq-a > * + * { margin-top: 8px; }
+.page-hero .lead { font-size: 18px; line-height: 28px; color: #A9A9A9; margin-top: 16px; max-width: 680px; }
+
+/* Encabezado de página bajo la cabecera flotante */
+.page-hero + .sec { scroll-margin-top: 96px; }
+
+/* Cabecera fija: Shopify envuelve cada sección en un <div>; el "sticky" debe ir en ese contenedor,
+   si no, el menú se suelta apenas se hace scroll (el contenedor mide 0 de alto). */
+.header-section { position: sticky; top: 0; z-index: 50; height: 0; }
+.header-section .nav { position: relative; }

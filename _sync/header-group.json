@@ -1,0 +1,49 @@
+{
+  "type": "header",
+  "name": "Cabecera",
+  "sections": {
+    "announcement": {
+      "type": "announcement-bar",
+      "blocks": {
+        "a1": {
+          "type": "announcement",
+          "settings": {
+            "bold": "10% de descuento",
+            "text": "en tu primera compra de accesorios"
+          }
+        },
+        "a2": {
+          "type": "announcement",
+          "settings": {
+            "bold": "Envío gratis a todo el Perú",
+            "text": "por la compra de tu iPhone"
+          }
+        },
+        "a3": {
+          "type": "announcement",
+          "settings": {
+            "bold": "Lanzamiento:",
+            "text": "cubo 20W original de regalo con cualquier iPhone"
+          }
+        }
+      },
+      "block_order": [
+        "a1",
+        "a2",
+        "a3"
+      ]
+    },
+    "header": {
+      "type": "header",
+      "settings": {
+        "menu": "main-menu",
+        "hot_word": "Ofertas",
+        "menu_extra": "footer"
+      }
+    }
+  },
+  "order": [
+    "announcement",
+    "header"
+  ]
+}

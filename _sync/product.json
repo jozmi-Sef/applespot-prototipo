@@ -1,0 +1,46 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "settings": {
+        "related_title": "También te puede servir",
+        "related": "accesorios"
+      },
+      "blocks": {
+        "t1": {
+          "type": "tab",
+          "settings": {
+            "title": "Cómo verificar tu equipo",
+            "only": "iphone",
+            "imei_promise": true,
+            "content": "<ol><li><strong>Al confirmar tu pago</strong> te enviamos por WhatsApp el IMEI y el número de serie de tu equipo.</li><li><strong>Verifícalo tú mismo:</strong> en <a href=\"https://www.gob.pe/1170\" target=\"_blank\">Checa tu IMEI de OSIPTEL</a> confirmas que no está reportado, y en la <a href=\"https://checkcoverage.apple.com/\" target=\"_blank\">página de cobertura de Apple</a>, con el número de serie, confirmas que es original.</li><li><strong>Al recibirlo</strong> marca *#06# y compara el número con la caja y con el que te enviamos.</li></ol>"
+          }
+        },
+        "t2": {
+          "type": "tab",
+          "settings": {
+            "title": "Modo de uso y cuidados",
+            "only": "all",
+            "content": "<ul><li>Usa cargadores originales o certificados para cuidar la batería.</li><li>Evita exponerlo a temperaturas altas.</li><li>Coloca un case y un protector de pantalla desde el primer día.</li><li>Mantén iOS actualizado.</li></ul>"
+          }
+        },
+        "t3": {
+          "type": "tab",
+          "settings": {
+            "title": "Garantía",
+            "only": "all",
+            "content": "<p>Cubre fallas de fábrica. No cubre golpes, humedad ni manipulación de terceros. La hacemos válida en nuestra tienda de Piura o por WhatsApp si estás en provincia.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "t1",
+        "t2",
+        "t3"
+      ]
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

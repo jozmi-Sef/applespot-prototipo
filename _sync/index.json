@@ -1,0 +1,516 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero-promo",
+      "settings": {
+        "duration": 7
+      },
+      "blocks": {
+        "s1": {
+          "type": "slide",
+          "settings": {
+            "visual": "phones",
+            "color": "Naranja cósmico",
+            "kicker": "Nuevo · Sellado · Original",
+            "title": "iPhone 18 Pro Max",
+            "accent": "La cámara que llevas siempre",
+            "sub": "Equipos originales y sellados, con garantía de 1 año y envío gratis a todo el Perú.",
+            "cta_label": "Compra ahora",
+            "cta_link": "shopify://collections/iphone",
+            "secondary_label": "Ver toda la línea 18",
+            "secondary_link": "shopify://collections/iphone"
+          }
+        },
+        "s2": {
+          "type": "slide",
+          "settings": {
+            "visual": "gift",
+            "kicker": "Promoción de lanzamiento",
+            "title": "Llévate un regalo con tu iPhone",
+            "accent": "Cubo 20W original + AirPods",
+            "sub": "Cubo 20W con cualquier iPhone. Del 17 Pro al 18 Pro Max, también te llevas unos AirPods. Solo el primer mes.",
+            "countdown": true,
+            "gift_pro_note": "Del 17 Pro al 18 Pro Max",
+            "cta_label": "Ver equipos con regalo",
+            "cta_link": "shopify://collections/ofertas"
+          }
+        },
+        "s3": {
+          "type": "slide",
+          "settings": {
+            "visual": "accessories",
+            "kicker": "Primera compra",
+            "title": "10% en accesorios",
+            "accent": "Originales y certificados",
+            "sub": "Cubos, cables y cases para tu iPhone. Usa el código PRIMERA10 en tu primera compra.",
+            "cta_label": "Comprar accesorios",
+            "cta_link": "shopify://collections/accesorios"
+          }
+        }
+      },
+      "block_order": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    "categories": {
+      "type": "categories",
+      "settings": {
+        "phones_cta": "Ver todos los modelos",
+        "acc_cta": "Ver accesorios",
+        "phones_collection": "iphone",
+        "acc_collection": "accesorios"
+      }
+    },
+    "best": {
+      "type": "featured-collection",
+      "settings": {
+        "kicker": "Más vendidos",
+        "heading": "iPhone nuevos sellados",
+        "text": "Elige tu color. Todos incluyen envío gratis y garantía de 1 año.",
+        "limit": 4,
+        "note": "Equipos en stock: entrega de 3 a 5 días. Equipos a pedido: entrega de 6 a 7 días.",
+        "note_icon": "info",
+        "button_label": "Ver todos los iPhone",
+        "no_top": true,
+        "collection": "destacados",
+        "button_link": "shopify://collections/iphone"
+      }
+    },
+    "compare": {
+      "type": "compare-table",
+      "blocks": {
+        "m1": {
+          "type": "model",
+          "settings": {
+            "name": "iPhone 18 Pro Max",
+            "color": "Naranja cósmico",
+            "screen": "6,9\"",
+            "chip": "A20 Pro",
+            "cams": "Triple cámara Pro",
+            "battery": "La mayor de la línea",
+            "size": "Grande",
+            "warranty": "1 año",
+            "ideal": "Contenido, video y pantalla grande"
+          }
+        },
+        "m2": {
+          "type": "model",
+          "settings": {
+            "name": "iPhone 18 Pro",
+            "color": "Azul profundo",
+            "screen": "6,3\"",
+            "chip": "A20 Pro",
+            "cams": "Triple cámara Pro",
+            "battery": "Todo el día",
+            "size": "Compacto",
+            "warranty": "1 año",
+            "ideal": "Lo último en un tamaño cómodo"
+          }
+        },
+        "m3": {
+          "type": "model",
+          "settings": {
+            "name": "iPhone 17 Pro Max",
+            "color": "Plata",
+            "screen": "6,9\"",
+            "chip": "A19 Pro",
+            "cams": "Triple cámara Pro",
+            "battery": "Muy alta",
+            "size": "Grande",
+            "warranty": "1 año",
+            "ideal": "Pantalla grande a mejor precio"
+          }
+        },
+        "m4": {
+          "type": "model",
+          "settings": {
+            "name": "iPhone 17 Pro",
+            "color": "Naranja cósmico",
+            "screen": "6,3\"",
+            "chip": "A19 Pro",
+            "cams": "Triple cámara Pro",
+            "battery": "Todo el día",
+            "size": "Compacto",
+            "warranty": "1 año",
+            "ideal": "La opción Pro más accesible"
+          }
+        }
+      },
+      "block_order": [
+        "m1",
+        "m2",
+        "m3",
+        "m4"
+      ]
+    },
+    "used": {
+      "type": "featured-collection",
+      "settings": {
+        "kicker": "Seminuevos y exhibición",
+        "heading": "Sabes cómo está tu equipo antes de comprarlo",
+        "text": "Cada seminuevo muestra su salud de batería y su estado estético. Sin sorpresas al abrir la caja.",
+        "limit": 4,
+        "note": "Seminuevos y equipos de exhibición con 6 meses de garantía.",
+        "note_icon": "shield-check",
+        "button_label": "Ver todos los seminuevos",
+        "no_top": true,
+        "collection": "seminuevos"
+      },
+      "blocks": {
+        "c1": {
+          "type": "card",
+          "settings": {
+            "icon": "battery-high",
+            "title": "Salud de batería real",
+            "text": "El porcentaje que marca el iPhone en Ajustes, medido en tienda antes de publicarlo."
+          }
+        },
+        "c2": {
+          "type": "card",
+          "settings": {
+            "icon": "sparkle",
+            "title": "Grado A",
+            "text": "Como nuevo. Sin rayones ni golpes visibles."
+          }
+        },
+        "c3": {
+          "type": "card",
+          "settings": {
+            "icon": "hand",
+            "title": "Grado B",
+            "text": "Detalles leves de uso que no afectan el funcionamiento."
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3"
+      ]
+    },
+    "spin": {
+      "type": "spin-3d",
+      "settings": {
+        "kicker": "Novedades",
+        "heading": "iPhone 18 Pro Max",
+        "hint": "Desliza para descubrirlo",
+        "color": "Naranja cósmico",
+        "cta": "Compra ahora"
+      },
+      "blocks": {
+        "k1": {
+          "type": "callout",
+          "settings": {
+            "kicker": "Diseño Pro",
+            "title": "Se siente premium desde que lo sacas de la caja",
+            "text": "Nuevo, sellado y con su número de IMEI verificable."
+          }
+        },
+        "k2": {
+          "type": "callout",
+          "settings": {
+            "kicker": "Cámara",
+            "title": "Tres cámaras para fotos que se notan",
+            "text": "Retrato, gran angular y zoom. Ideal para contenido, estudios y negocio."
+          }
+        },
+        "k3": {
+          "type": "callout",
+          "settings": {
+            "kicker": "Garantía",
+            "title": "12 meses de respaldo real",
+            "text": "La garantía la hacemos válida en nuestra tienda de Piura."
+          }
+        },
+        "k4": {
+          "type": "callout",
+          "settings": {
+            "kicker": "Regalo",
+            "title": "AirPods y cubo 20W incluidos",
+            "text": "Durante el primer mes de lanzamiento de la tienda."
+          }
+        }
+      },
+      "block_order": [
+        "k1",
+        "k2",
+        "k3",
+        "k4"
+      ]
+    },
+    "tagline": {
+      "type": "tagline",
+      "settings": {
+        "text": "Equipos [originales], garantía [real] y una tienda que puedes visitar en Piura."
+      }
+    },
+    "benefits": {
+      "type": "benefits",
+      "settings": {
+        "kicker": "Por qué AppleSpot",
+        "heading": "Compra con respaldo, no solo con confianza",
+        "layout": "benefits",
+        "no_top": true
+      },
+      "blocks": {
+        "b1": {
+          "type": "wide",
+          "settings": {
+            "icon": "shield-check",
+            "title": "Garantía 100% real",
+            "text": "Si tu equipo presenta una falla de fábrica dentro del periodo de garantía, lo revisamos directamente en nuestra tienda de Jr. Arequipa 147.",
+            "big": "1 año"
+          }
+        },
+        "b2": {
+          "type": "card",
+          "settings": {
+            "icon": "seal-check",
+            "title": "Equipos originales",
+            "text": "Importados y verificables por IMEI. Al confirmar tu pago te enviamos el número para que lo confirmes."
+          }
+        },
+        "b3": {
+          "type": "card",
+          "settings": {
+            "icon": "package",
+            "title": "Envío gratis a todo el Perú",
+            "text": "Por la compra de cualquier iPhone. Tú eliges si lo recibes en tu domicilio o en agencia."
+          }
+        },
+        "b4": {
+          "type": "card",
+          "settings": {
+            "icon": "credit-card",
+            "title": "Pagos seguros",
+            "text": "Tarjeta de crédito, débito o transferencia bancaria. Precios en soles.",
+            "chips": "Visa, Mastercard, Transferencia"
+          }
+        },
+        "b5": {
+          "type": "card",
+          "settings": {
+            "icon": "headset",
+            "title": "Calidad y servicio garantizado",
+            "text": "Te acompañamos antes y después de la compra. Boleta electrónica enviada por WhatsApp."
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5"
+      ]
+    },
+    "steps": {
+      "type": "benefits",
+      "settings": {
+        "kicker": "Cómo comprar",
+        "heading": "Tu iPhone en casa en tres pasos",
+        "layout": "steps",
+        "dark": true
+      },
+      "blocks": {
+        "p1": {
+          "type": "step",
+          "settings": {
+            "title": "Elige modelo, color y capacidad",
+            "text": "Compra como invitado o crea tu cuenta para seguir tus pedidos."
+          }
+        },
+        "p2": {
+          "type": "step",
+          "settings": {
+            "title": "Paga en línea de forma segura",
+            "text": "Tarjeta de crédito, débito o transferencia bancaria."
+          }
+        },
+        "p3": {
+          "type": "step",
+          "settings": {
+            "title": "Recíbelo donde prefieras",
+            "text": "Entrega en 3 a 5 días. Nosotros preparamos y despachamos tu pedido.",
+            "chips": "Domicilio, Agencia, Recojo en tienda"
+          }
+        }
+      },
+      "block_order": [
+        "p1",
+        "p2",
+        "p3"
+      ]
+    },
+    "reels": {
+      "type": "customer-reels",
+      "settings": {
+        "no_top": true
+      },
+      "blocks": {
+        "r1": {
+          "type": "reel",
+          "settings": {
+            "network": "tiktok",
+            "title": "Unboxing iPhone 17 Pro Max",
+            "place": "Cliente en Castilla, Piura"
+          }
+        },
+        "r2": {
+          "type": "reel",
+          "settings": {
+            "network": "instagram",
+            "title": "Unboxing iPhone 16 Pro",
+            "place": "Entrega en tienda"
+          }
+        },
+        "r3": {
+          "type": "reel",
+          "settings": {
+            "network": "tiktok",
+            "title": "Unboxing iPhone 17 Pro",
+            "place": "Envío a Sullana"
+          }
+        },
+        "r4": {
+          "type": "reel",
+          "settings": {
+            "network": "instagram",
+            "title": "Unboxing iPhone 15",
+            "place": "Veintiséis de Octubre"
+          }
+        }
+      },
+      "block_order": [
+        "r1",
+        "r2",
+        "r3",
+        "r4"
+      ]
+    },
+    "combos": {
+      "type": "combos-signup",
+      "settings": {
+        "button_label": "Ver todos los accesorios",
+        "button_link": "shopify://collections/accesorios"
+      }
+    },
+    "gallery": {
+      "type": "social-gallery",
+      "blocks": {
+        "g1": {
+          "type": "post"
+        },
+        "g2": {
+          "type": "post"
+        },
+        "g3": {
+          "type": "post"
+        },
+        "g4": {
+          "type": "post"
+        },
+        "g5": {
+          "type": "post"
+        },
+        "g6": {
+          "type": "post"
+        }
+      },
+      "block_order": [
+        "g1",
+        "g2",
+        "g3",
+        "g4",
+        "g5",
+        "g6"
+      ]
+    },
+    "faq": {
+      "type": "faq",
+      "settings": {
+        "heading": "Resolvemos tus dudas antes de comprar",
+        "button_label": "Ver todas las preguntas",
+        "no_top": true,
+        "button_link": "shopify://pages/preguntas-frecuentes"
+      },
+      "blocks": {
+        "q1": {
+          "type": "q",
+          "settings": {
+            "group": "Equipos",
+            "q": "¿Son equipos originales?",
+            "a": "<p>Sí. Todos nuestros equipos son 100% originales e importados. Una vez confirmado tu pago, te compartimos el IMEI por WhatsApp para que lo verifiques en OSIPTEL. Si no pasa la verificación, te cambiamos el equipo sin costo.</p>"
+          }
+        },
+        "q2": {
+          "type": "q",
+          "settings": {
+            "group": "Equipos",
+            "q": "¿Cuentan con garantía?",
+            "a": "<p>Sí. Los equipos nuevos sellados tienen 1 año de garantía. Los equipos seminuevos y de exhibición tienen 6 meses.</p>"
+          }
+        },
+        "q3": {
+          "type": "q",
+          "settings": {
+            "group": "Equipos",
+            "q": "¿Qué diferencia hay entre nuevo, seminuevo y exhibición?",
+            "a": "<p>Nuevo: sellado de fábrica. Seminuevo: usado previamente, revisado y en buen estado estético. Exhibición: equipo usado en vitrina, con uso mínimo.</p>"
+          }
+        },
+        "q4": {
+          "type": "q",
+          "settings": {
+            "group": "Pagos",
+            "q": "¿Venden iPhone en cuotas?",
+            "a": "<p>Sí. Al pagar con tarjeta de crédito puedes elegir cuotas. Si hay intereses, los aplica tu banco.</p>"
+          }
+        },
+        "q5": {
+          "type": "q",
+          "settings": {
+            "group": "Envíos",
+            "q": "¿Hacen envíos a provincia?",
+            "a": "<p>Sí. El envío es gratis a todo el Perú por la compra de cualquier iPhone, con entrega de 3 a 5 días. No realizamos envíos internacionales.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5"
+      ]
+    },
+    "visit": {
+      "type": "store-visit"
+    },
+    "final": {
+      "type": "final-cta",
+      "settings": {
+        "link": "shopify://collections/iphone"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "categories",
+    "best",
+    "compare",
+    "used",
+    "spin",
+    "tagline",
+    "benefits",
+    "steps",
+    "reels",
+    "combos",
+    "gallery",
+    "faq",
+    "visit",
+    "final"
+  ]
+}
